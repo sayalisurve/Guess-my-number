@@ -1,0 +1,42 @@
+#!/bin/bash
+var3=$((RANDOM % 9+21))
+echo "Please select number between 10 to 30"
+no_of_chances=1
+
+for each in 1 2 3
+do
+        echo "Enter a number:"
+        echo "This is your chance no  $no_of_chances,Guess the number"
+
+        read var4
+        if (( var4 == var3 ))
+        then
+                echo "You guessed right"
+                echo "You win.Congratulations"
+                echo "You guessed this with $no_of_chances chance/chances"
+                echo "THANK YOU FOR PLAYING"
+                break
+
+        fi
+
+        if (( var4 > var3))
+        then
+                echo "You are getting far"
+                echo "guess a lower number"
+                echo "The range is between 10 to 30"
+
+        fi
+
+        if (( var4 < var3 ))
+        then
+                echo "You are close to the number"
+                echo "guess higher number"
+                echo "The range is between 10 to 30"
+
+        fi
+        no_of_chances=$((no_of_chances+1))
+
+
+done
+
+~                                                                  
